@@ -2,7 +2,7 @@
 const nextConfig = {
     images: {
         domains: [
-            "img.icons8.com", "th.bing.com"
+            "img.icons8.com", "th.bing.com", "images.pexels.com"
         ]
     }
 };

@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -19,6 +19,18 @@ const config = {
     },
     extend: {
       colors: {
+        dark: {
+          1: "#424242",
+          2: "#616161",
+          3: "#757575",
+          4: "#9E9E9E",
+          5: "#BDBDBD",
+        },
+        white: {
+          1: "#F5F5F5",
+          2: "#EEEEEE",
+          3: "#E0E0E0",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -77,4 +89,4 @@ const config = {
   plugins: [require("tailwindcss-animate")],
 } satisfies Config
 
-export default config
+export default config;
