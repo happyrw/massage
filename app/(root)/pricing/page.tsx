@@ -16,7 +16,7 @@ const PricingPage = () => {
 
             <div className='grid grid-cols-3 gap-4 min-w-[700px] overflow-x-auto'>
                 {member_shipPlans.map((shipPlan) => (
-                    <div className='hover:bg-orange-100 dark:bg-card bg-white-2 p-2 shadow-lg'>
+                    <div key={shipPlan.name} className='hover:bg-orange-100 dark:bg-card bg-white-2 p-2 shadow-lg'>
                         <h1 className='text-center p-4 uppercase underline'>{shipPlan.name}</h1>
                         <div className='flex gap-5'>
                             <p className="">Monthly Fee:</p>
@@ -24,8 +24,10 @@ const PricingPage = () => {
                         </div>
                         <p className='my-2 '>Benefits:</p>
                         <div className='pl-5 text-muted-foreground'>
-                            {shipPlan.benefits.map((benefit) => (
-                                <p>{benefit}</p>
+                            {shipPlan.benefits.map((benefit, index) => (
+                                <div key={index}>
+                                    <p>{benefit}</p>
+                                </div>
                             ))}
                         </div>
                     </div>
